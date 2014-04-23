@@ -1,0 +1,23 @@
+﻿Ngày 6-3-2014 
++ Hoàn thành: Ghép xong giao diện mới
++ Hoàn thành: Hiển thị danh sách cate trong trang chủ tin tức
+
+===== Code lấy id và title link video =====
+ <?php
+	$yt_url='http://www.youtube.com/watch?v=WUSuO_DSuls';
+	function get_youtube_id_from_url($url){
+		if (stristr($url,'youtu.be/')){ 
+			preg_match('/(https|http):\/\/(.*?)\/([a-zA-Z0-9_]{11})/i', $url, $final_ID);return $final_ID[3]; 
+		}else { 
+			preg_match('/(https|http):\/\/(.*?)\/(embed\/|watch\?v=|(.*?)&v=|v\/|e\/|.+\/|watch.*v=|)([a-zA-Z0-9_]{11})/i', $url, $IDD); return $IDD[5]; 
+		}
+	}
+	$variable= get_youtube_id_from_url($yt_url);
+	$id = $variable;
+	$videoTitle = file_get_contents("http://gdata.youtube.com/feeds/api/videos/${id}?v=2&fields=title");
+	preg_match("/<title>(.+?)<\/title>/is", $videoTitle, $titleOfVideo);
+	$videoTitle = $titleOfVideo[1];
+	echo $videoTitle;
+?>
+
+==========================================
