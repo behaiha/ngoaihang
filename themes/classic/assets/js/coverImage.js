@@ -3,7 +3,7 @@ function CoverImage (data) {
 	var dataImage = null;
 	var t = this;
 	var maxHeight = 385,minHeight = 0;
-	var hImg = '120%';
+	var hImg = '135%';
 	var _startY = 0;
 	var _offsetY = 0;
 	var _dragElement;			// needs to be passed from OnMouseDown to OnMouseMove
@@ -20,7 +20,7 @@ function CoverImage (data) {
 		return minHeight;
 	}
 	var hImage = t.getMinHeight();
-	if (hImage <= maxHeight ) {
+	if (hImage < maxHeight ) {
 		hImage = maxHeight;
 		jQuery(data.nameImg).css('height',hImg);
 	};

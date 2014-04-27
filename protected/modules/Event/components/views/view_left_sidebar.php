@@ -8,7 +8,7 @@
 	<hr class="prl-article-divider">
     <p class="rating-head user-prl">Khách mời</p>
     <p class="rating-head if-user">
-    	<div class="join">
+    	<div class="join begin-join"> 
     		<a href="">55</a>
     		<p>Tham gia</p>
     	</div>
@@ -18,27 +18,75 @@
     	</div>
     </p>
     <hr class="prl-article-divider">
-    <p class="rating-head">Sự kiện liên quan</p>
-    <div class="event-correlative">
-    	<div class="event-corre">
-    		<a href="">
-    			<img src="<?php echo $srcImg; ?>">
-    		</a>
-    		<a href="">Trận đấu bán kết ManU và Real</a>
-    		<a href="">Tham gia</a>
+    <div class="widget widget_newsletter prl-panel">
+    <h5 class="prl-block-title">Mời bạn bè</h5>
+        <form class="prl-form">
+            <div class="friend-events">
+                <div class="friend">
+                    <div class="image">
+                        <a href="">
+                            <img src="./images/users/avatar/avatar.png">
+                        </a>
+                    </div>
+                    <a href="" class="f-name-user title">Tuấn anh</a> <br>
+                    <a href="" class="title add">Tham gia</a>
 
-    	</div>
+                </div>
+                <div class="friend">
+                    <div class="image">
+                        <a href="">
+                            <img src="./images/users/avatar/avatar.png">
+                        </a>
+                    </div>
+                    <a href="" class="f-name-user title">Tuấn anh</a> <br>
+                    <a href="" class="title add">Tham gia</a>
+
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 <style type="text/css">
 div.join{
 	float: left;
-	margin-left: 3px;
+	margin: 0px 5px 12px 0px;
 	border: 1px solid #eee;
 	padding: 3px 8px 0px;
 	box-shadow: 0px 0px 3px;
 	border-radius: 7%;
 	border-color: #999 #777 #777 #999;
-	background: -webkit-gradient(linear,center top,center bottom,from(#FFFFFF),to(#D4D4C4));
+	background: -webkit-gradient(linear,center top,center bottom,from(#FFFFFF),to(rgba(145, 145, 142, 0.44)));
+}
+div.friend div.image{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 58px;
+    float: left;
+}
+div.friend a.title{
+    margin-left: 4px;
+}
+div.friend a.add{
+    border: 1px solid;
+    padding: 2px 3px;
+    color: #fff;
+    background: -webkit-gradient(linear,center top,center bottom,from(#FFFFFF),to(#D44343));
+}
+div.friend img{
+    width: 60px;
+    float: right;
+}
+div.friend a{
+    float: left;
+}
+a.f-name-user{
+    font-weight: bold;
+    color:#fff;
+}
+div.friend{
+    border-bottom: 1px solid;
+    overflow: hidden;
+    height: 65px;
+    margin-top: 5px;
 }
 </style>

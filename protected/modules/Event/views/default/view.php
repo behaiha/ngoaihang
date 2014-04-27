@@ -1,12 +1,12 @@
 <section id="main" class="prl-span-9">
-	<?php $this->widget('Event.components.View_Event_Thumbai',array('model'=>$model)); ?>
-	<article id="article-single"> 
-	<div class="prl-grid">	
-    	<div class="view-show-post prl-span-9 prl-span-flip posts-users" id="content_tube" >
-    		<?php $this->widget('Pages.components.View_Post_Status'); ?>
+    <article id="article-single"> 
+    <?php $this->widget('Event.components.View_Event_Thumbai',array('model'=>$model)); ?>
+    <div class="prl-grid">  
+        <div class="view-show-post prl-span-9 prl-span-flip posts-users" id="content_tube" >
+            <?php $this->widget('Pages.components.View_Post_Status'); ?>
             <?php $this->widget('Pages.components.View_Show_All_Status'); ?>
-	   </div>
-	   <?php $this->widget('Event.components.View_Left_Sidebar'); ?>
+       </div>
+       <?php $this->widget('Event.components.View_Left_Sidebar'); ?>
     </div>
 </article>
 </section>
